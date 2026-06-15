@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Retirada de Pedidos</h1>
+    <div class="container">
+        <div class="box">
+            <h2>Em preparo</h2>
+        </div>
+        <div class="box">
+            <h2>Pronto para retirada</h2>
+        </div>
+    </div>
+    <h3 id="tempo-medio">Tempo médio de espera: X minutos</h2>
+    <script>
+        const response = await fetch("/pedido", {
+          method: "POST",
+          body: JSON.stringify(json),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+    </script>
+</body>
+</html>
