@@ -3,11 +3,19 @@ import { Queue } from "../models/Queue.js";
 export class nomeService {
   constructor() {
     this.fila = new Queue();
-  }
+    this.fila.queue(
+  { id: 1, cliente: 'Ana', itens: ['X-burger', 'Batata'], status: 'na_fila', horaPedido: new Date().toISOString() },
+  { id: 2, cliente: 'Bruno', itens: ['Coca-cola'], status: 'na_fila', horaPedido: new Date().toISOString()}
 
+)
+  }
+  listarFila() {
+  return this.fila.toArray();
+}
   
   
-  /*
+  
+  
   validaAutenticacao(autenticacao) {
     const [prefixo, numero] = autenticacao.split("-");
 
@@ -32,11 +40,6 @@ export class nomeService {
     );
 
     return true;
-  }*/
+  }
  
 } 
-let fila = new Queue();
-fila = [
-  { id: 1, cliente: 'Ana', itens: ['X-burger', 'Batata'], status: 'na_fila', horaPedido: '...' },
-  { id: 2, cliente: 'Bruno', itens: ['Coca-cola'], status: 'na_fila', horaPedido: '...' }
-]

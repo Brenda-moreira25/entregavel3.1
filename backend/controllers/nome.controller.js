@@ -6,7 +6,11 @@ export class nomeController {
     this.nomeService = new nomeService();
     this.router = Router();
   }
-
+  listarPedido(req, res){
+    const pedidos = this.nomeService.listarFila();
+    res.status(200).json(pedidos);
+  }
+  /*
   inicializaRouter() {
     this.router.post("/paga-recompensa", this.pagaRecompensa.bind(this));
   }
@@ -61,5 +65,5 @@ export class nomeController {
     res.status(200).json({
       message: `você recebeu a recompensa de ${carta.valor} moedas de ouro, pelo seguinte motivo: ${carta.motivo}!`,
     });
-  }
+  }*/
 }
